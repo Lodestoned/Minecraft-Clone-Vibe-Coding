@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cglh30hd0r1q2"]
+
+[ext_resource type="Script" uid="uid://dbnbyt0ivwnde" path="res://scripts/Chunk.gd" id="1_kdh3y"]
+
+[node name="Chunk" type="StaticBody3D"]
+script = ExtResource("1_kdh3y")

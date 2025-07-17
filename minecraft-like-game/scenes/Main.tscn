@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://csomg33dy62qn"]
+
+[ext_resource type="Script" uid="uid://cwken3xlk44fa" path="res://scripts/Main.gd" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://dbmkfll25f2jb" path="res://scenes/Player.tscn" id="2_rvslj"]
+[ext_resource type="Script" uid="uid://ccxoasypljhru" path="res://scripts/VoxelWorld.gd" id="3_0bbpv"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_elqb8")
+
+[node name="Player" parent="." instance=ExtResource("2_rvslj")]
+
+[node name="VoxelWorld" type="Node3D" parent="."]
+script = ExtResource("3_0bbpv")
