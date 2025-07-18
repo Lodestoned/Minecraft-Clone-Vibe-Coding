@@ -1,11 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://csomg33dy62qn"]
+[gd_scene load_steps=7 format=3 uid="uid://csomg33dy62qn"]
 
 [ext_resource type="Script" uid="uid://cwken3xlk44fa" path="res://scripts/Main.gd" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://dbmkfll25f2jb" path="res://scenes/Player.tscn" id="2_rvslj"]
 [ext_resource type="Script" uid="uid://ccxoasypljhru" path="res://scripts/VoxelWorld.gd" id="3_0bbpv"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0bbpv"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_rarhs"]
+sky_material = SubResource("ProceduralSkyMaterial_0bbpv")
+
+[sub_resource type="Environment" id="Environment_vcsgt"]
+background_mode = 2
+sky = SubResource("Sky_rarhs")
+tonemap_mode = 2
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_elqb8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vcsgt")
 
 [node name="Player" parent="." instance=ExtResource("2_rvslj")]
 
